@@ -7,10 +7,6 @@ public class VolumeCalculator {
 		return size * 3.281d;
 	}
 	
-	public static double convertMt(double size) {
-		return size / 3.281d;
-	}
-	
 	public static void main(String[] args) {
 		// declare unit
 		String unit = "metres cubed";
