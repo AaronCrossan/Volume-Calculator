@@ -10,14 +10,7 @@ public class VolumeCalculator {
 	public static void main(String[] args) {
 		// declare unit
 		String unit = "metres cubed";
-		
-		// initialise & modify array
-		int[] test = {1,2,3,4,5};
-		for (int i=0; i < test.length; i++) {
-			if (test[i] == 3) test[i] = 10;
-			
-			System.out.println(test[i]);
-		}
+
 		
 		// initialise lengths
 		double length = 1.00d;
