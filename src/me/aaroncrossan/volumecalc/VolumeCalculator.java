@@ -8,9 +8,10 @@ public class VolumeCalculator {
 	}
 	
 	public static void main(String[] args) {
+		System.out.println("Volume Calculator 1.0");
+		
 		// declare unit
 		String unit = "metres cubed";
-
 		
 		// initialise lengths
 		double length = 1.00d;
