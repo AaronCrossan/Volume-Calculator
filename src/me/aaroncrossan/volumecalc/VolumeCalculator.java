@@ -14,9 +14,10 @@ public class VolumeCalculator {
 		String unit = "metres cubed";
 		
 		// initialise lengths
-		double length = 1.00d;
-		double width = 3.00d;
-		double height = 5.00d;
+		
+		double length = Double.parseDouble(System.console().readLine("enter length : "));
+		double width = Double.parseDouble(System.console().readLine("enter width : "));
+		double height = Double.parseDouble(System.console().readLine("enter height : "));
 		
 		// check all sizes are valid
 		if (length > 0 && width > 0 && height > 0) {
@@ -26,6 +27,8 @@ public class VolumeCalculator {
 			System.out.println("your total volume is " + (volume > 0 ? volume : "") + " " + unit + " and");
 			// print cubed ft
 			System.out.println("your total voume is " + (volume > 0 ? convertFt(volume) : "") + " cubed ft.");
+		} else {
+			System.out.println("width, length and height must all be greater than 0.");
 		}
 	}
 }
