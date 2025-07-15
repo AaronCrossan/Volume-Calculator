@@ -14,10 +14,19 @@ public class VolumeCalculator {
 		String unit = "metres cubed";
 		
 		// initialise lengths
+		double length = 0;
+		double width = 0;
+		double height = 0;
 		
-		double length = Double.parseDouble(System.console().readLine("enter length : "));
-		double width = Double.parseDouble(System.console().readLine("enter width : "));
-		double height = Double.parseDouble(System.console().readLine("enter height : "));
+		try {
+			length = Double.parseDouble(System.console().readLine("enter length : "));
+			width = Double.parseDouble(System.console().readLine("enter width : "));
+			height = Double.parseDouble(System.console().readLine("enter height : "));
+			
+		} catch (Exception e) {
+			System.out.println("Inputs must be a number.");
+		}
+		
 		
 		// check all sizes are valid
 		if (length > 0 && width > 0 && height > 0) {
@@ -26,7 +35,7 @@ public class VolumeCalculator {
 			// print metres^3
 			System.out.println("your total volume is " + (volume > 0 ? volume : "") + " " + unit + " and");
 			// print cubed ft
-			System.out.println("your total voume is " + (volume > 0 ? convertFt(volume) : "") + " cubed ft.");
+			System.out.println("your total voume is " + (volume > 0 ? convertFt(volume) : "") + " ft cubed.");
 		} else {
 			System.out.println("width, length and height must all be greater than 0.");
 		}
